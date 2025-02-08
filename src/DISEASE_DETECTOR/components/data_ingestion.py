@@ -5,6 +5,15 @@ from DISEASE_DETECTOR.logger import logging
 import pandas as pd
 from dataclasses import dataclass
 
+
+from DISEASE_DETECTOR.components.data_transformation import Data_Transformation
+from DISEASE_DETECTOR.components.data_transformation import DataTransformationConfig
+
+from DISEASE_DETECTOR.components.model_trainer import ModelTrainer
+from DISEASE_DETECTOR.components.model_trainer import ModelTrainerConfig
+
+
+
 @dataclass
 class DataIngestionConfig:
     raw_data_path:str = os.path.join('artifacts', "data.csv")
@@ -36,6 +45,7 @@ class DataIngestion:
 
             logging.info('getting the symptoms from the dataframe')
             dd1 = mal_symp + typh_symp + pneum_symp + mig_symp + choles_symp
+            dd1.append('prognosis')
             symp_list = list(set(dd1))
 
             logging.info('we put all the symptoms list together and also putting it in a set to avoid duplication')
@@ -62,4 +72,11 @@ class DataIngestion:
 
 if __name__ =="__main__":
     obj = DataIngestion()
-    obj.Initiate_data_ingestion()
+    raw_data = obj.Initiate_data_ingestion()
+
+    data_transformation = Data_Transformation()
+    feature_array, target_data, processor = data_transformation.Initiate_data_transformation(raw_data)
+
+    model_trainer = ModelTrainer()
+    model_trainer.initiate_model_trianer(feature_array, target_data)
+
