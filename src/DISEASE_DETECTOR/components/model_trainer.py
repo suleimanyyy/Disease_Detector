@@ -51,6 +51,7 @@ class ModelTrainer:
             logging.info('Since the models all have a perfect performnance we will select one to use at random')
             selected_model = random.choice(models_list)
 
+            logging.info('saving model...')
             save_object(file_path=self.model_trainer_config.trained_model_file_path, obj=selected_model)
 
 

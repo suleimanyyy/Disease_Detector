@@ -33,9 +33,11 @@ class Data_Transformation:
         try:
             logging.info('reading the data into a dataframe')
             df = pd.read_csv(raw_data_path)
+            logging.info(f'the column order is {df.columns}')
 
             logging.info('spliting the data into features and target')
             feature_data = df.drop(columns='prognosis')
+            logging.info(f'feature data column order is {feature_data.columns}')
             target_data = df["prognosis"]
 
             preprocessor_object = self.get_data_transformer()

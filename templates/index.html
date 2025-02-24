@@ -1,0 +1,469 @@
+<html>
+    <body>
+        <div class="login">
+            <h1> Symptom Based Disease detector app </h1>
+            <form action="{{url_for('predict_datapoint')}}" method="post">
+                <h1>please Enter your symptoms accordingly </h1>
+                <div>
+                    <label class="form-label">toxic_look</label>
+                    <select class="form-control" name="toxic_look" placeholder="Enter your symptoms accordingly" required>
+                        <option class="placeholder" selected disabled value="Do you have a toxic_look">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label"> excessive_hunger </label>
+                    <select class="form-control" name="excessive_hunger" placeholder="Enter your hunger symptoms" required>
+                        <option class="placeholder" selected disabled value="Do you get hungry excessively">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">sweating</label>
+                    <select class="form-control" name="sweating" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">diarrhoea</label>
+                    <select class="form-control" name="diarrhoea" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">abdominal_pain</label>
+                    <select class="form-control" name="abdominal_pain" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">yellowish_skin</label>
+                    <select class="form-control" name="yellowish_skin" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">visual_disturbances</label>
+                    <select class="form-control" name="visual_disturbances" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">blurred_and_distorted_vision</label>
+                    <select class="form-control" name="blurred_and_distorted_vision" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">malaise</label>
+                    <select class="form-control" name="malaise" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">fast_heart_rate</label>
+                    <select class="form-control" name="fast_heart_rate" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">phlegm</label>
+                    <select class="form-control" name="phlegm" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">chills</label>
+                    <select class="form-control" name="chills" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">itching</label>
+                    <select class="form-control" name="itching" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">acidity</label>
+                    <select class="form-control" name="acidity" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">nausea</label>
+                    <select class="form-control" name="nausea" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">cough</label>
+                    <select class="form-control" name="cough" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">indigestion</label>
+                    <select class="form-control" name="indigestion" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">fatigue</label>
+                    <select class="form-control" name="fatigue" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">depression</label>
+                    <select class="form-control" name="depression" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">breathlessness</label>
+                    <select class="form-control" name="breathlessness" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">headache</label>
+                    <select class="form-control" name="headache" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">high_fever</label>
+                    <select class="form-control" name="high_fever" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">constipation</label>
+                    <select class="form-control" name="constipation" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">muscle_pain</label>
+                    <select class="form-control" name="muscle_pain" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">belly_pain</label>
+                    <select class="form-control" name="belly_pain" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">loss_of_appetite</label>
+                    <select class="form-control" name="loss_of_appetite" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">chest_pain</label>
+                    <select class="form-control" name="chest_pain" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">rusty_sputum</label>
+                    <select class="form-control" name="rusty_sputum" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">stiff_neck</label>
+                    <select class="form-control" name="stiff_neck" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">yellowing_of_eyes</label>
+                    <select class="form-control" name="yellowing_of_eyes" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">irritability</label>
+                    <select class="form-control" name="irritability" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="form-label">vomiting</label>
+                    <select class="form-control" name="vomiting" placeholder="Enter" required>
+                        <option class="placeholder" selected disabled value="select your">
+                            <option value=Yes>
+                                Yes
+                            </option>
+                            <option value=No>
+                                No
+                            </option>
+                        </option>
+                    </select>
+                </div>
+
+
+                <div>
+                    <input class="btn btn-primary" type="submit" value="predict your Disease" required >
+                </div>
+
+
+            </form>
+
+
+            <h1> you have: {{prediction}} </h1>
+
+            <h1>please take the following Precautions: {{c1}}, {{c2}}, {{c3}} , {{c4}}</h1>
+        </div>
+    </body>
+</html>

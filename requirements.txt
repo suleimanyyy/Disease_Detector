@@ -4,4 +4,6 @@ seaborn
 notebook
 matplotlib
 scikit-learn
+dill
+Flask
 #-e .
